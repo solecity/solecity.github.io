@@ -102,7 +102,7 @@
 /* menu options */
 .menu-wrapper {
   background-color: var(--ci-tertiary);
-  z-index: 999999999;
+  z-index: 1;
   position: fixed;
   width: 0;
   height: 0;
