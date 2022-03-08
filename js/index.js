@@ -12,7 +12,7 @@ const techSkills = [
   { name: "Express", years: 4 },
   { name: "MySQL", years: 1 },
   { name: "Figma", years: 2 },
-  { name: "Adobe XD", years: 2 },
+  { name: "Adobe XD", years: 4 },
   { name: "Adobe Photoshop", years: 4 },
   { name: "Adobe Illustrator", years: 4 },
   { name: "Blender", years: 1 },
@@ -55,6 +55,8 @@ const loadSkills = () => {
     years.innerHTML = `${
       techSkills[i].years === 0
         ? "less than a year"
+        : techSkills[i].years === 1
+        ? `${techSkills[i].years} year`
         : `${techSkills[i].years} years`
     }`;
     years.setAttribute("class", "years");
