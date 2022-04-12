@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -91,19 +91,40 @@
       </div>
     </section>
 
-    <!--
-    <section id="projects">
-        <h2>PROJECTS</h2>
-        <div>
-            <h6>NOMAD</h6>
-            <figure>
-                <img src="">
-            </figure>
-            <div>
-                <p>DESCRIPTION</p>
-            </div>
-        </div>
-    </section>-->
+    <section id="work">
+      <div id="tabs">
+        <button
+          id="defaultOpen"
+          class="tabLinks"
+          type="button"
+          onclick="handleProjects(event, 'all')"
+        >
+          All
+        </button>
+        <button
+          class="tabLinks"
+          type="button"
+          onclick="handleProjects(event,'art')"
+        >
+          Art
+        </button>
+        <button
+          class="tabLinks"
+          type="button"
+          onclick="handleProjects(event,'design')"
+        >
+          Design
+        </button>
+        <button
+          class="tabLinks"
+          type="button"
+          onclick="handleProjects(event,'programming')"
+        >
+          Programming
+        </button>
+      </div>
+      <div id="projects"></div>
+    </section>
 
     <section id="contact">
       <div>

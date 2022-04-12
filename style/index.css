@@ -2,11 +2,12 @@
   --c-yellow: #ffcf24;
   --c-grey: #e6e6e6;
   --c-black: #1e1e1e;
-  --c-white: #fefcfc;
+  --c-white: #fcfcfc;
 
   --ci-primary: var(--c-yellow);
   --ci-secondary: var(--c-grey);
   --ci-tertiary: var(--c-black);
+  --ci-alt: var(--c-white);
 
   --f-main: "Roboto", sans-serif;
 }
@@ -16,7 +17,7 @@
 }
 
 body {
-  background-color: var(--c-white);
+  background-color: var(--ci-alt);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -38,7 +39,6 @@ h3 {
   font-weight: 500;
 }
 
-/* menu button */
 .menu-circle {
   background-color: var(--ci-tertiary);
   z-index: 999999999;
@@ -72,7 +72,7 @@ h3 {
   top: 45%;
   left: 0;
   right: 0;
-  background: var(--c-white);
+  background: var(--ci-alt);
   border-radius: 10px;
   transition: background 0s 0.3s;
 }
@@ -83,7 +83,7 @@ h3 {
   width: 100%;
   position: absolute;
   display: block;
-  background-color: var(--c-white);
+  background-color: var(--ci-alt);
   border-radius: 10px;
   content: "";
 }
@@ -137,7 +137,6 @@ h3 {
   transform: rotate(-45deg);
 }
 
-/* menu options */
 .menu-wrapper {
   background-color: var(--ci-tertiary);
   z-index: 1;
@@ -146,7 +145,7 @@ h3 {
   height: 0;
   top: 0;
   right: 0;
-  color: var(--c-white);
+  color: var(--ci-alt);
   font-size: 32px;
   border-bottom-left-radius: 100%;
   cursor: pointer;
@@ -156,7 +155,7 @@ h3 {
 
 .menu-wrapper a {
   text-decoration: none;
-  color: var(--c-white);
+  color: var(--ci-alt);
 }
 
 .menu-wrapper a:hover {
@@ -221,13 +220,15 @@ h3 {
 .links a {
   margin-right: 20px;
   text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.links a:hover #Ellipse_2,
-.links a:hover #Ellipse_3,
-.links a:hover #Ellipse_4 {
-  opacity: 60%;
-  transition: all 0.5s ease-in-out;
+.links a:hover,
+.links a:hover,
+.links a:hover,
+#tabs > button:hover {
+  opacity: 0.6;
 }
 
 .icon {
@@ -235,7 +236,8 @@ h3 {
   width: 69px;
 }
 
-#about {
+#about,
+#work {
   padding-bottom: 100px;
 }
 
@@ -320,9 +322,97 @@ h3 {
   font-size: 14px;
 }
 
+#work {
+  background-color: var(--ci-secondary);
+  padding: 50px 150px;
+}
+
+#tabs {
+  display: flex;
+  justify-content: center;
+}
+
+#tabs button {
+  background-color: var(--ci-tertiary);
+  margin-left: 32px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  color: var(--ci-alt);
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#tabs .active {
+  background-color: var(--ci-primary);
+  color: var(--ci-tertiary);
+}
+
+#projects {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  justify-content: center;
+}
+
+#projects .project {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#projects .project .info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#projects .project:hover .info {
+  background-color: #d1d1d1bd;
+  opacity: 1;
+}
+
+#projects .project p {
+  margin: 8px;
+}
+
+#projects .project .label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#projects .project .position {
+  font-size: 14px;
+}
+
+#projects .project .more {
+  background-color: var(--ci-tertiary);
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--ci-alt);
+  font-size: 14px;
+  font-weight: 300;
+}
+
 #contact {
   background-color: var(--ci-primary);
-  padding: 50px 80px;
+  padding: 50px 150px;
 }
 
 #contact > div {
@@ -345,8 +435,8 @@ h3 {
   background-color: var(--ci-tertiary);
   height: 4rem;
   display: flex;
-  padding-left: 80px;
+  padding-left: 150px;
   vertical-align: middle;
-  color: var(--c-white);
+  color: var(--ci-alt);
   font-weight: 300;
 }

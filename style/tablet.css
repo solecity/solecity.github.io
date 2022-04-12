@@ -7,7 +7,6 @@
     padding: 30px;
   }
 
-  /* menu button */
   .menu-circle {
     height: 80px;
     width: 80px;
@@ -36,7 +35,6 @@
     bottom: -12px;
   }
 
-  /* menu options */
   .menu-wrapper {
     font-size: 24px;
   }
@@ -71,7 +69,8 @@
     width: 58px;
   }
 
-  #about {
+  #about,
+  #work {
     padding-bottom: 72px;
   }
 
