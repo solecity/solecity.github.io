@@ -1,4 +1,4 @@
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 425px) {
   body {
     font-size: 12px;
   }
@@ -7,9 +7,29 @@
     padding: 20px;
   }
 
+  /* menu button */
+  .menu-circle {
+    height: 72px;
+    width: 72px;
+  }
+
+  /* menu options */
+  .menu-wrapper {
+    font-size: 20px;
+  }
+
+  .open-menu .menu-wrapper {
+    width: 332px;
+    height: 332px;
+  }
+
+  .menu {
+    padding-top: 64px;
+  }
+
   #home {
-    padding-top: 300px;
-    font-size: 50px;
+    padding-top: 372px;
+    font-size: 32px;
   }
 
   .links {
@@ -21,121 +41,55 @@
   }
 
   .icon {
-    height: 69px;
-    width: 69px;
+    height: 46px;
+    width: 46px;
   }
 
   #about {
-    display: block;
-    padding-bottom: 100px;
+    padding-bottom: 48px;
   }
 
   #about .triangle {
-    height: 100px;
-    position: relative;
-    clip-path: polygon(100% -10%, 100% 0, 50% 100%, 0 0, 0 -10%);
-  }
-
-  #me,
-  #competencies {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 14px;
   }
 
   #me {
-    padding: 150px 0 100px 0;
-  }
-
-  #me .personal-img,
-  #me .info {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  #me .personal-img {
-    margin-right: 80px;
-  }
-
-  #me .img {
-    height: 212px;
-    width: 489px;
+    padding: 42px 32px;
   }
 
   #me .title {
-    font-size: 28px;
-  }
-
-  #me .info {
-    max-width: 580px;
+    font-size: 24px;
   }
 
   #competencies > div {
-    max-width: 60%;
-    vertical-align: middle;
-  }
-
-  #competencies p {
-    margin: 0;
+    max-width: 100%;
+    padding: 0 32px;
   }
 
   #competencies h2 {
-    font-size: 38px;
-    font-weight: 500;
+    font-size: 24px;
   }
 
   #competencies h3 {
-    font-size: 28px;
-    font-weight: 500;
+    font-size: 18px;
   }
 
   #competencies .skill {
-    margin: 0 30px 30px 0;
-    padding: 14px 18px;
-    display: inline-block;
-    position: relative;
-    border-radius: 10px;
-    font-size: 19px;
-    font-weight: 300;
-  }
-
-  #tech-wrapper {
-    margin-bottom: 60px;
-    position: relative;
-    z-index: -1;
-  }
-
-  #tech-wrapper .years {
-    font-size: 14px;
+    margin: 0 18px 18px 0;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 16px;
   }
 
   #contact {
-    padding: 50px 80px;
+    padding: 32px;
   }
 
   #contact > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  #info span {
-    font-weight: bold;
-  }
-
-  #links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 
   .footer {
-    height: 4rem;
-    display: flex;
-    padding-left: 80px;
-    vertical-align: middle;
-    color: var(--c-white);
-    font-weight: 300;
+    padding-left: 32px;
   }
 }
