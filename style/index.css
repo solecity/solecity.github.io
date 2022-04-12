@@ -12,10 +12,6 @@
   --f-main: "Roboto", sans-serif;
 }
 
-* {
-  border: 1px solid red !important;
-}
-
 body {
   background-color: var(--ci-alt);
   margin: 0;
