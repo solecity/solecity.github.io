@@ -41,15 +41,22 @@ h3 {
 
 button {
   background-color: var(--ci-tertiary);
+  margin-right: 32px;
+  padding: 12px 24px;
   border: none;
+  border-radius: 12px;
   cursor: pointer;
+  color: var(--ci-alt);
+  font-size: 24px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .menu-circle {
   background-color: var(--ci-tertiary);
   z-index: 999999999;
-  height: 90px;
-  width: 90px;
+  height: 96px;
+  width: 96px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,38 +66,35 @@ button {
 
 .btn-menu {
   background-color: transparent;
-  z-index: 999999999;
-  display: block;
-  position: relative;
-  margin: 0;
-  padding: 0;
   width: 40px;
   height: 40px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 999999999;
 }
 
 .btn-menu span {
+  background: var(--ci-alt);
   height: 6px;
   display: block;
   position: absolute;
   top: 45%;
   left: 0;
   right: 0;
-  background: var(--ci-alt);
-  border-radius: 10px;
+  border-radius: 12px;
   transition: background 0s 0.3s;
 }
 
 .btn-menu span:before,
 .btn-menu span:after {
+  background-color: var(--ci-alt);
   height: 6px;
   width: 100%;
   position: absolute;
   display: block;
-  background-color: var(--ci-alt);
-  border-radius: 10px;
+  border-radius: 12px;
   content: "";
 }
 
@@ -169,8 +173,8 @@ button {
 }
 
 .open-menu .menu-wrapper {
-  width: 500px;
-  height: 500px;
+  width: 504px;
+  height: 504px;
   border-bottom-left-radius: 100%;
   animation: jelly 0.8s linear forwards;
 }
@@ -194,12 +198,12 @@ button {
 }
 
 .menu {
-  padding-top: 100px;
+  padding-top: 20%;
   padding-left: 20%;
   list-style: none;
   text-align: center;
   opacity: 0;
-  line-height: 50px;
+  line-height: 56px;
   letter-spacing: 1px;
 }
 
@@ -208,23 +212,12 @@ button {
   transition: opacity 0.3s 0.3s;
 }
 
-#home {
-  background-color: var(--ci-primary);
-  height: calc(100vh - 10rem);
-  padding-top: 250px;
-  font-size: 100px;
-}
-
-#home > h1 {
-  text-align: center;
-}
-
 .links {
-  margin-top: 30px;
+  margin-top: 32px;
 }
 
 .links a {
-  margin-right: 20px;
+  margin-right: 24px;
   text-decoration: none;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
@@ -233,66 +226,77 @@ button {
 .links a:hover,
 .links a:hover,
 .links a:hover,
-#tabs > button:hover {
+button:hover {
   opacity: 0.6;
 }
 
 .icon {
-  height: 69px;
-  width: 69px;
+  height: 64px;
+  width: 64px;
 }
 
-#about,
-#work {
-  padding-bottom: 100px;
+#home,
+#about .triangle,
+#me,
+#contact {
+  background-color: var(--ci-primary);
+}
+
+#home,
+#me > div,
+#competencies,
+#projects .project,
+#projects .project .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home {
+  height: 100vh;
+  font-size: 100px;
+}
+
+#me,
+#competencies,
+#work,
+#contact {
+  padding: 88px 200px;
 }
 
 #about .triangle {
-  background-color: var(--ci-primary);
   height: 72px;
   position: relative;
   z-index: -1;
   clip-path: polygon(100% -10%, 100% 0, 50% 100%, 0 0, 0 -10%);
 }
 
-#me,
-#competencies {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#me {
-  background-color: var(--ci-primary);
-  padding: 150px 0 100px 0;
-}
-
-#me .personal-img,
-#me .info {
+#me > div,
+#competencies > div {
   vertical-align: middle;
+}
+
+#me > div {
+  flex-direction: row;
 }
 
 #me .personal-img {
   background-color: var(--ci-secondary);
+  width: 70%;
   margin-right: 80px;
 }
 
 #me .img {
-  height: 212px;
-  width: 489px;
+  height: 224px;
+}
+
+#me .info {
+  width: 100%;
 }
 
 #me .title {
   font-size: 28px;
-}
-
-#me .info {
-  max-width: 580px;
-}
-
-#competencies > div {
-  max-width: 60%;
-  vertical-align: middle;
 }
 
 #competencies p {
@@ -309,24 +313,48 @@ button {
 
 #competencies .skill {
   background-color: var(--ci-secondary);
-  margin: 0 30px 30px 0;
-  padding: 14px 18px;
+  margin: 0 24px 24px 0;
+  padding: 10px 16px;
   display: inline-block;
   position: relative;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 20px;
   font-weight: 400;
 }
 
-#techWrapper {
-  margin-bottom: 60px;
+#techWrapper,
+#softWrapper {
   position: relative;
   z-index: -1;
 }
 
+#techWrapper {
+  margin-bottom: 64px;
+}
+
+#dividerTop,
+#dividerBottom,
+.divider {
+  height: 72px;
+  position: relative;
+  z-index: -1;
+}
+
+.divider,
 #work {
   background-color: var(--ci-secondary);
-  padding: 50px 150px;
+}
+
+#dividerTop > div {
+  clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+}
+
+#dividerBottom {
+  background-color: var(--ci-primary);
+}
+
+#dividerBottom > div {
+  clip-path: polygon(0 100%, 0% 0, 100% 0, 0 100%);
 }
 
 #tabs {
@@ -334,23 +362,18 @@ button {
   justify-content: center;
 }
 
-#tabs button {
-  margin-left: 32px;
-  padding: 12px 24px;
-  border-radius: 10px;
-  color: var(--ci-alt);
-  font-size: 24px;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+#tabs button:last-child {
+  margin-right: 0;
 }
 
 #tabs .active {
   background-color: var(--ci-primary);
   color: var(--ci-tertiary);
+  opacity: 1;
 }
 
 #projects {
-  margin-top: 48px;
+  margin-top: 56px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
@@ -360,12 +383,8 @@ button {
 #projects .project {
   background-size: cover;
   background-position: center;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
+  height: 304px;
+  border-radius: 12px;
   text-align: center;
 }
 
@@ -373,10 +392,7 @@ button {
   height: 100%;
   width: 100%;
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 #projects .project:hover .info {
@@ -399,8 +415,9 @@ button {
 
 #projects .project .more {
   margin-top: 12px;
+  margin-left: 0;
   padding: 8px 12px;
-  border-radius: 5px;
+  border-radius: 6px;
   color: var(--ci-alt);
   font-size: 14px;
   font-weight: 300;
@@ -420,27 +437,47 @@ button {
   overflow: auto;
 }
 
-#modal .close {
-  margin: 2px 12px;
-  color: var(--ci-primary);
+#modal .btn-close {
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  position: relative;
+  top: 16px;
+  right: 16px;
   float: right;
-  cursor: pointer;
-  font-size: 28px;
-  font-weight: bold;
 }
 
-#modal .close:hover,
-#modal .close:focus {
-  text-decoration: none;
+#modal .btn-close:hover,
+#modal .btn-close:focus {
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
+}
+
+#modal .btn-close span:before,
+#modal .btn-close span:after {
+  background-color: var(--ci-primary);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  border-radius: 12px;
+  content: "";
+}
+
+#modal .btn-close span:before {
+  transform: rotate(45deg);
+}
+
+#modal .btn-close span:after {
+  transform: rotate(-45deg);
 }
 
 #modal .modal-content {
   background-color: var(--ci-alt);
   width: 50%;
   position: fixed;
-  border-radius: 10px;
+  border-radius: 12px;
   animation: 0.8s fadeIn;
 }
 
@@ -456,8 +493,8 @@ button {
 #modal .modal-header {
   background-size: cover;
   background-position: center;
-  height: 250px;
-  border-radius: 10px 10px 0 0;
+  height: 256px;
+  border-radius: 12px 12px 0 0;
 }
 
 #modal .modal-body {
@@ -472,16 +509,15 @@ button {
 }
 
 #modal #skills {
-  margin: 20px 0;
-  padding: 10px 18px;
+  margin: 24px 0;
+  padding: 12px 16px;
 }
 
 #modal .skill {
-  background-color: var(--ci-tertiary);
+  background-color: var(--ci-secondary);
   margin: 18px 18px 0 0;
-  padding: 10px 16px;
+  padding: 12px 16px;
   display: inline-block;
-  color: var(--ci-alt);
   border-radius: 6px;
 }
 
@@ -489,15 +525,10 @@ button {
   margin-right: 0;
 }
 
-#contact {
-  background-color: var(--ci-primary);
-  padding: 50px 150px;
-}
-
 #contact > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 24px;
 }
 
 #info span {
@@ -506,15 +537,15 @@ button {
 
 #links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.footer {
+#footer {
   background-color: var(--ci-tertiary);
   height: 4rem;
+  padding-left: 200px;
   display: flex;
-  padding-left: 150px;
   vertical-align: middle;
   color: var(--ci-alt);
   font-weight: 300;

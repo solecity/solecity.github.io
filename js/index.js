@@ -176,7 +176,7 @@ const handleTabs = (e, tab) => {
 const handleModal = () => {
   const moreButtons = document.getElementsByClassName("more");
   const modal = document.getElementById("modal");
-  const close = document.getElementsByClassName("close")[0];
+  const close = document.getElementsByClassName("btn-close")[0];
 
   for (const button of moreButtons) {
     button.addEventListener("click", () => {

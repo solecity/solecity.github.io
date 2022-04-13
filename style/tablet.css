@@ -1,10 +1,7 @@
-@media only screen and (max-width: 1024px) {
-  body {
-    font-size: 14px;
-  }
-
-  header {
-    padding: 30px;
+@media only screen and (max-width: 768px) {
+  button {
+    font-size: 18px;
+    border-radius: 8px;
   }
 
   .menu-circle {
@@ -12,106 +9,80 @@
     width: 80px;
   }
 
-  .btn-menu {
-    width: 32px;
-    height: 32px;
-  }
-
-  .btn-menu span {
-    height: 4px;
-    border-radius: 10px;
-  }
-
-  .btn-menu span:before,
-  .btn-menu span:after {
-    height: 4px;
-  }
-
-  .btn-menu span:before {
-    top: -12px;
-  }
-
-  .btn-menu span:after {
-    bottom: -12px;
-  }
-
-  .menu-wrapper {
-    font-size: 24px;
-  }
-
-  .open-menu .menu-wrapper {
-    width: 380px;
-    height: 380px;
-  }
-
-  .menu {
-    padding-top: 88px;
-    padding-left: 16%;
-    line-height: 40px;
+  .links a {
+    margin-right: 16px;
   }
 
   #home {
-    padding-top: 212px;
-    font-size: 70px;
+    font-size: 56px;
   }
 
-  .links {
-    margin-top: 30px;
-  }
-
-  .links a {
-    margin-right: 20px;
-    text-decoration: none;
-  }
-
-  .icon {
-    height: 58px;
-    width: 58px;
-  }
-
-  #about,
-  #work {
-    padding-bottom: 72px;
+  #me,
+  #competencies,
+  #work,
+  #contact {
+    padding: 64px 96px;
   }
 
   #about .triangle {
-    height: 24px;
+    height: 32px;
   }
 
-  #me {
-    display: grid;
-    justify-content: center;
-    padding: 80px 0;
+  #me > div {
+    flex-direction: column;
   }
 
   #me .personal-img {
     margin-right: 0;
-  }
-
-  #me .img {
-    width: 100%;
-  }
-
-  #me .title {
-    font-size: 24px;
-  }
-
-  #competencies > div {
-    max-width: 80%;
-  }
-
-  #competencies h2 {
-    font-size: 32px;
-  }
-
-  #competencies h3 {
-    font-size: 24px;
+    margin-bottom: 32px;
   }
 
   #competencies .skill {
-    margin: 0 22px 22px 0;
-    padding: 10px 12px;
+    margin: 0 16px 16px 0;
+    padding: 8px 14px;
     border-radius: 8px;
     font-size: 14px;
+  }
+
+  #techWrapper {
+    margin-bottom: 40px;
+  }
+
+  #dividerTop,
+  #dividerBottom,
+  .divider {
+    height: 56px;
+  }
+
+  #projects {
+    margin-top: 48px;
+    grid-template-columns: 1fr;
+  }
+
+  #projects .project .name {
+    font-size: 26px;
+  }
+
+  #projects .project .position {
+    font-size: 16px;
+  }
+
+  #projects .project .more {
+    margin-top: 24px;
+    padding: 10px 16px;
+  }
+
+  #modal .modal-content {
+    width: 80%;
+  }
+
+  #modal .skill {
+    background-color: var(--ci-secondary);
+    margin: 14px 14px 0 0;
+    padding: 10px 12px;
+  }
+
+  #footer {
+    padding-left: 96px;
   }
 }

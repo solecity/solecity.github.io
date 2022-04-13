@@ -14,6 +14,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/small.css" />
     <link rel="stylesheet" href="style/tablet.css" />
     <link rel="stylesheet" href="style/phone.css" />
 
@@ -46,33 +47,35 @@
 
     <section id="about">
       <div id="me">
-        <div class="personal-img">
-          <div class="img"></div>
-        </div>
-        <div class="info">
-          <h2 class="title">Hi! My name is Mariana.</h2>
-          <p>I am a full-stack web developer based in Portugal.</p>
-          <p>
-            I have been working as a web developer since 2019. I've always
-            though of myself as someone who is creative as well as logical. In
-            college, I started with game design and there I discovered that
-            coding was also a great fit for me. I then moved onto web
-            development and I've worked as a full-stack developer since.
-          </p>
-          <p>
-            Having both a logical side and a creative side I'm able to bring
-            creations to life from start to finish without losing any details.
-          </p>
-          <div class="links">
-            <a href="https://github.com/solecity">
-              <img src="svg/github.svg" alt="github" class="icon" />
-            </a>
-            <a href="https://www.linkedin.com/in/mariana-m-64966a63/">
-              <img src="svg/linkedin.svg" alt="linkedin" class="icon" />
-            </a>
-            <a href="https://www.behance.net/marianamoreira6">
-              <img src="svg/behance.svg" alt="behance" class="icon" />
-            </a>
+        <div>
+          <div class="personal-img">
+            <div class="img"></div>
+          </div>
+          <div class="info">
+            <h2 class="title">Hi! My name is Mariana.</h2>
+            <p>I am a full-stack web developer based in Portugal.</p>
+            <p>
+              I have been working as a web developer since 2019. I've always
+              though of myself as someone who is creative as well as logical. In
+              college, I started with game design and there I discovered that
+              coding was also a great fit for me. I then moved onto web
+              development and I've worked as a web developer ever since.
+            </p>
+            <p>
+              Having both a logical side and a creative side I'm able to bring
+              creations to life from start to finish without losing any detail.
+            </p>
+            <div class="links">
+              <a href="https://github.com/solecity">
+                <img src="svg/github.svg" alt="github" class="icon" />
+              </a>
+              <a href="https://www.linkedin.com/in/mariana-m-64966a63/">
+                <img src="svg/linkedin.svg" alt="linkedin" class="icon" />
+              </a>
+              <a href="https://www.behance.net/marianamoreira6">
+                <img src="svg/behance.svg" alt="behance" class="icon" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -89,6 +92,10 @@
           <div id="softWrapper"></div>
         </div>
       </div>
+    </section>
+
+    <section id="dividerTop">
+      <div class="divider"></div>
     </section>
 
     <section id="work">
@@ -128,7 +135,9 @@
       <div id="modal" class="modal">
         <div class="modal-content">
           <div class="modal-header">
-            <span class="close">&times;</span>
+            <button class="btn-close">
+              <span></span>
+            </button>
           </div>
           <div class="modal-body">
             <h2 id="modalTitle"></h2>
@@ -137,6 +146,10 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="dividerBottom">
+      <div class="divider"></div>
     </section>
 
     <section id="contact">
@@ -162,7 +175,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer id="footer">
       <p>Copyright © 2022 Mariana Moreira</p>
     </footer>
   </body>

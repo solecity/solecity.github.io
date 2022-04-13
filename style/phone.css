@@ -1,15 +1,29 @@
-@media only screen and (max-width: 425px) {
-  body {
-    font-size: 12px;
-  }
-
+@media only screen and (max-width: 450px) {
   header {
     padding: 20px;
   }
 
+  button {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
   .menu-circle {
-    height: 72px;
-    width: 72px;
+    height: 64px;
+    width: 64px;
+  }
+
+  .btn-menu {
+    width: 28px;
+    height: 28px;
+  }
+
+  .btn-menu span:before {
+    top: -10px;
+  }
+
+  .btn-menu span:after {
+    bottom: -10px;
   }
 
   .menu-wrapper {
@@ -17,78 +31,78 @@
   }
 
   .open-menu .menu-wrapper {
-    width: 332px;
-    height: 332px;
+    width: 320px;
+    height: 320px;
   }
 
   .menu {
-    padding-top: 64px;
-  }
-
-  #home {
-    padding-top: 372px;
-    font-size: 32px;
-  }
-
-  .links {
-    margin-top: 30px;
-  }
-
-  .links a {
-    margin-right: 20px;
+    line-height: 32px;
   }
 
   .icon {
-    height: 46px;
-    width: 46px;
+    height: 48px;
+    width: 48px;
   }
 
-  #about,
-  #work {
-    padding-bottom: 48px;
+  #home {
+    font-size: 32px;
+  }
+
+  #me,
+  #competencies,
+  #work,
+  #contact {
+    padding: 56px 32px;
   }
 
   #about .triangle {
-    height: 14px;
+    height: 24px;
   }
 
-  #me {
-    padding: 42px 32px;
+  #me .personal-img {
+    margin-bottom: 16px;
   }
 
-  #me .title {
-    font-size: 24px;
+  #dividerTop,
+  #dividerBottom,
+  .divider {
+    height: 32px;
   }
 
-  #competencies > div {
-    max-width: 100%;
-    padding: 0 32px;
+  #tabs {
+    flex-direction: column;
   }
 
-  #competencies h2 {
-    font-size: 24px;
+  #projects .project .name {
+    font-size: 20px;
   }
 
-  #competencies h3 {
-    font-size: 18px;
+  #modal #skills {
+    margin: 16px 0;
+    padding: 8px 14px;
   }
 
-  #competencies .skill {
-    margin: 0 18px 18px 0;
-    padding: 10px 12px;
-    border-radius: 6px;
-    font-size: 16px;
-  }
-
-  #contact {
-    padding: 32px;
+  #modal .skill {
+    margin: 10px 10px 0 0;
+    padding: 8px 10px;
   }
 
   #contact > div {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
   }
 
-  .footer {
+  #links {
+    justify-content: flex-start;
+  }
+
+  #links .links {
+    margin-top: 0;
+  }
+
+  #footer {
     padding-left: 32px;
   }
 }
