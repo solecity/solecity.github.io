@@ -415,7 +415,7 @@ button:hover {
 
 #projects .project .more {
   margin-top: 12px;
-  margin-left: 0;
+  margin-right: 0;
   padding: 8px 12px;
   border-radius: 6px;
   color: var(--ci-alt);
@@ -502,18 +502,24 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding: 0 18px;
 }
 
-#modal #modalTitle {
+#modalTitle {
   margin-bottom: 0;
 }
 
-#modal #skills {
+#positions {
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+#skills {
   margin: 24px 0;
   padding: 12px 16px;
 }
 
-#modal .skill {
+#skills .skill {
   background-color: var(--ci-secondary);
   margin: 18px 18px 0 0;
   padding: 12px 16px;
@@ -521,7 +527,7 @@ button:hover {
   border-radius: 6px;
 }
 
-#modal .skill:last-child {
+#skills .skill:last-child {
   margin-right: 0;
 }
 

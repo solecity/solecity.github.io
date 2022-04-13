@@ -77,6 +77,21 @@
     font-size: 20px;
   }
 
+  #positions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #positions p:first-child {
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  #positions p {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
   #modal #skills {
     margin: 16px 0;
     padding: 8px 14px;
