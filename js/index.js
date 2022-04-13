@@ -34,48 +34,74 @@ const projectsList = [
     id: "nomad",
     name: "NOMAD",
     positions: ["UI / UX Designer", "Front-End Developer"],
+    description: "",
     skills: ["Adobe Illustrator", "HTML", "CSS", "JavaScript"],
-    img: "/img/no-image.png",
+    img: "/img/nomad.png",
+    source: "https://github.com/solecity/NOMAD",
+    //demo: "https://solecity.github.io/NOMAD/",
   },
   {
     tabs: ["design", "programming"],
-    id: "feiraArtesanato",
-    name: "FEIRA DE ARTESANATO VILA DO CONDE",
+    id: "artisanFair",
+    name: "ARTISAN'S FAIR VILA DO CONDE",
     positions: ["UI / UX Designer", "Java Developer"],
+    description:
+      "The challenge was to create an application that would allow our visitors to have real time access to all the different events, artisan booths and activities carried out during the fair.",
     skills: ["Adobe Illustrator", "Adobe XD", "Java", "Android Studio"],
     img: "/img/feira-artesanato.png",
+    source: "https://github.com/ESMAPP/Artesanato_2.0_Android",
+    design: "https://www.behance.net/gallery/99300747/UIUX-Artisans-Fair-app",
   },
   {
     tabs: ["programming"],
     id: "hydraTaskManager",
     name: "HYDRA TASK MANAGER",
     positions: ["Full-Stack Developer"],
+    description:
+      "Development of a data analysis module, incorporated in the HydraDev human resources platform, which extracts data from the reports that are submitted daily by the development team.",
     skills: ["JavaScript", "React", "MongoDb", "Express", "NodeJs"],
-    img: "/img/no-image.png",
+    img: "/img/hydra-dev.png",
+    source: "private",
   },
   {
     tabs: ["design", "programming"],
     id: "lune",
     name: "LUNE - FINANCE TRACKER",
     positions: ["UI / UX Designer", "Full-Stack Developer"],
+    description: "",
     skills: ["Figma", "JavaScript", "React", "MongoDb", "Express", "NodeJs"],
-    img: "/img/no-image.png",
+    img: "/img/lune.png",
   },
   {
     tabs: ["design"],
     id: "tusky",
     name: "TUSKY - COMPANY MANAGER",
     positions: ["UI / UX Designer"],
+    description: "",
     skills: ["Figma"],
-    img: "/img/no-image.png",
+    img: "/img/tusky.png",
   },
   {
     tabs: ["art"],
     id: "thePromisedReef",
     name: "THE PROMISED REEF",
     positions: ["Concept Artist"],
+    description:
+      "This project consisted in the development of a prototype, incorporating game design practices and art asset production.",
     skills: ["Drawing", "Adobe Photoshop"],
     img: "/img/the-promised-reef.png",
+    artwork: "https://www.artstation.com/artwork/1BPQK",
+  },
+  {
+    tabs: ["art"],
+    id: "villageAssetPack",
+    name: "VILLAGE ASSET PACK",
+    positions: ["2D Artist"],
+    description:
+      "This project consisted in the production of pixel art game assets.",
+    skills: ["Drawing", "Adobe Photoshop"],
+    img: "/img/village-asset-pack.png",
+    artwork: "https://www.artstation.com/artwork/4R5g2",
   },
 ];
 
@@ -194,8 +220,9 @@ const handleModal = () => {
 const showProject = (id) => {
   const header = document.getElementsByClassName("modal-header")[0];
   const modalTitle = document.getElementById("modalTitle");
-  const skills = document.getElementById("skills");
   const positions = document.getElementById("positions");
+  const description = document.getElementById("description");
+  const skills = document.getElementById("skills");
 
   positions.innerHTML = "";
   skills.innerHTML = "";
@@ -207,14 +234,17 @@ const showProject = (id) => {
   header.style.backgroundImage = `url(${project.img})`;
 
   modalTitle.innerHTML = project.name;
+  description.innerHTML = project.description;
 
   createLabel(project.positions, positions, "position");
   createLabel(project.skills, skills, "skill");
+
+  handleButtons(project);
 };
 
 const createLabel = (arr, wrapper, className) => {
   for (const skill of arr) {
-    let p = document.createElement("p");
+    const p = document.createElement("p");
 
     p.innerHTML = skill;
 
@@ -222,4 +252,58 @@ const createLabel = (arr, wrapper, className) => {
 
     wrapper.appendChild(p);
   }
+};
+
+const handleButtons = (project) => {
+  const footer = document.getElementsByClassName("modal-footer")[0];
+
+  footer.innerHTML = "";
+
+  if (project.source) {
+    let source = "";
+
+    if (project.source === "private") {
+      source = createButton("Private", "source", "", true);
+    } else {
+      source = createButton("Source", "source", project.source);
+    }
+
+    footer.appendChild(source);
+  }
+
+  if (project.demo) {
+    const demo = createButton("Live Demo", "demo", project.demo);
+
+    footer.appendChild(demo);
+  }
+
+  if (project.design) {
+    const design = createButton("Design", "design", project.design);
+
+    footer.appendChild(design);
+  }
+
+  if (project.artwork) {
+    const artwork = createButton("Artwork", "artwork", project.artwork);
+
+    footer.appendChild(artwork);
+  }
+};
+
+const createButton = (name, idName, href, isDisabled = false) => {
+  const button = document.createElement("button");
+
+  button.innerHTML = name;
+  button.href = href;
+
+  button.setAttribute("id", idName);
+
+  if (isDisabled) button.disabled = true;
+  else button.disabled = false;
+
+  button.addEventListener("click", () => {
+    window.open(href, "_blank");
+  });
+
+  return button;
 };
