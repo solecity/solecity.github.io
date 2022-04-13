@@ -287,13 +287,13 @@ button:not(:disabled):hover {
 }
 
 #me .personal-img {
-  background-color: var(--ci-secondary);
   width: 70%;
   margin-right: 80px;
 }
 
 #me .img {
-  height: 224px;
+  width: 100%;
+  border-radius: 20px;
 }
 
 #me .info {

@@ -85,7 +85,7 @@ const projectsList = [
     tabs: ["art"],
     id: "thePromisedReef",
     name: "THE PROMISED REEF",
-    positions: ["Concept Artist"],
+    positions: ["Concept Artist", "2D Artist"],
     description:
       "This project consisted in the development of a prototype, incorporating game design practices and art asset production.",
     skills: ["Drawing", "Adobe Photoshop"],
