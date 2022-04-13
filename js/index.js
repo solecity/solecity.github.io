@@ -137,6 +137,9 @@ const showProject = (id) => {
   createLabel(project.skills, skills, "skill");
 
   handleButtons(project);
+
+  if (project.description !== "") description.style.display = "block";
+  else description.style.display = "none";
 };
 
 const createLabel = (arr, wrapper, className) => {

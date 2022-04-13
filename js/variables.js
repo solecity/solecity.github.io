@@ -132,4 +132,15 @@ const projectsList = [
     img: "/img/sassa.png",
     artwork: "https://www.artstation.com/artwork/l6edJ",
   },
+  {
+    tabs: ["art"],
+    id: "sleepingMouse",
+    name: "sleeping mouse",
+    year: 201701,
+    positions: ["Illustrator"],
+    description: "",
+    skills: ["Drawing", "Adobe Photoshop"],
+    img: "/img/sleeping-mouse.png",
+    artwork: "https://www.artstation.com/artwork/dP6EA",
+  },
 ];
