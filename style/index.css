@@ -44,12 +44,17 @@ button {
   margin-right: 32px;
   padding: 12px 24px;
   border: none;
-  border-radius: 12px;
+  border-radius: 6px;
   cursor: pointer;
   color: var(--ci-alt);
-  font-size: 24px;
+  font-size: 20px;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
+}
+
+button:disabled {
+  background-color: var(--ci-bg-modal);
+  cursor: initial;
 }
 
 .menu-circle {
@@ -83,7 +88,7 @@ button {
   top: 45%;
   left: 0;
   right: 0;
-  border-radius: 12px;
+  border-radius: 8px;
   transition: background 0s 0.3s;
 }
 
@@ -94,7 +99,7 @@ button {
   width: 100%;
   position: absolute;
   display: block;
-  border-radius: 12px;
+  border-radius: 8px;
   content: "";
 }
 
@@ -226,7 +231,7 @@ button {
 .links a:hover,
 .links a:hover,
 .links a:hover,
-button:hover {
+button:not(:disabled):hover {
   opacity: 0.6;
 }
 
@@ -316,10 +321,7 @@ button:hover {
   margin: 0 24px 24px 0;
   padding: 10px 16px;
   display: inline-block;
-  position: relative;
-  border-radius: 12px;
-  font-size: 20px;
-  font-weight: 400;
+  border-radius: 6px;
 }
 
 #techWrapper,
@@ -383,7 +385,7 @@ button:hover {
 #projects .project {
   background-size: cover;
   background-position: center;
-  height: 304px;
+  height: 296px;
   border-radius: 12px;
   text-align: center;
 }
@@ -441,6 +443,7 @@ button:hover {
   background-color: transparent;
   width: 24px;
   height: 24px;
+  margin: 0;
   padding: 0;
   position: relative;
   top: 16px;
@@ -461,7 +464,7 @@ button:hover {
   width: 100%;
   position: absolute;
   display: block;
-  border-radius: 12px;
+  border-radius: 8px;
   content: "";
 }
 
@@ -478,7 +481,7 @@ button:hover {
   width: 50%;
   position: fixed;
   border-radius: 12px;
-  animation: 0.8s fadeIn;
+  animation: 0.5s fadeIn;
 }
 
 @keyframes fadeIn {
@@ -493,7 +496,7 @@ button:hover {
 #modal .modal-header {
   background-size: cover;
   background-position: center;
-  height: 256px;
+  height: 304px;
   border-radius: 12px 12px 0 0;
 }
 
@@ -502,7 +505,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 0 18px;
+  padding: 0 24px;
 }
 
 #modalTitle {
@@ -514,20 +517,42 @@ button:hover {
   justify-content: space-evenly;
 }
 
+#description {
+  margin-top: 24px;
+  padding: 0 24px;
+  font-size: 14px;
+}
+
 #skills {
-  margin: 24px 0;
-  padding: 12px 16px;
+  margin-top: 24px;
 }
 
 #skills .skill {
   background-color: var(--ci-secondary);
   margin: 18px 18px 0 0;
-  padding: 12px 16px;
+  padding: 10px 16px;
   display: inline-block;
   border-radius: 6px;
+  font-size: 16px;
 }
 
 #skills .skill:last-child {
+  margin-right: 0;
+}
+
+#modal .modal-footer {
+  margin: 18px 0;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+#modal .modal-footer button {
+  margin-bottom: 0;
+  padding: 10px 16px;
+}
+
+#modal .modal-footer button:last-child {
   margin-right: 0;
 }
 

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1180px) {
   body {
     font-size: 14px;
   }
@@ -87,10 +87,7 @@
   }
 
   #competencies .skill {
-    background-color: var(--ci-secondary);
     margin: 0 20px 20px 0;
-    padding: 12px 16px;
-    font-size: 16px;
   }
 
   #projects {
@@ -99,6 +96,23 @@
 
   #modal .modal-content {
     width: 60%;
+  }
+
+  #modal .modal-header {
+    height: 264px;
+  }
+
+  #skills {
+    margin-top: 18px;
+  }
+
+  #modal .modal-footer {
+    margin: 14px 0;
+  }
+
+  #modal .modal-footer button {
+    padding: 8px 14px;
+    font-size: 16px;
   }
 
   #footer {

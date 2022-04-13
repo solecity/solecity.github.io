@@ -1,4 +1,4 @@
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 500px) {
   header {
     padding: 20px;
   }
@@ -77,6 +77,10 @@
     font-size: 20px;
   }
 
+  #modal .modal-header {
+    height: 200px;
+  }
+
   #positions {
     display: flex;
     flex-direction: column;
@@ -92,14 +96,21 @@
     margin-bottom: 0;
   }
 
-  #modal #skills {
-    margin: 16px 0;
-    padding: 8px 14px;
+  #skills {
+    margin-top: 14px;
   }
 
   #modal .skill {
     margin: 10px 10px 0 0;
     padding: 8px 10px;
+  }
+
+  #modal .modal-footer {
+    margin: 10px 0;
+  }
+
+  #modal .modal-footer button {
+    margin-right: 18px;
   }
 
   #contact > div {
