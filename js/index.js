@@ -32,8 +32,8 @@ const projectsList = [
   {
     tabs: ["design", "programming"],
     id: "nomad",
-    name: "NOMAD",
-    year: 2018,
+    name: "nomad",
+    year: 201806,
     positions: ["UI / UX Designer", "Front-End Developer"],
     description: "",
     skills: ["Adobe Illustrator", "HTML", "CSS", "JavaScript"],
@@ -44,8 +44,8 @@ const projectsList = [
   {
     tabs: ["design", "programming"],
     id: "artisanFair",
-    name: "ARTISAN'S FAIR VILA DO CONDE",
-    year: 2020,
+    name: "artisan's fair vila do conde",
+    year: 202007,
     positions: ["UI / UX Designer", "Java Developer"],
     description:
       "The challenge was to create an application that would allow our visitors to have real time access to all the different events, artisan booths and activities carried out during the fair.",
@@ -57,8 +57,8 @@ const projectsList = [
   {
     tabs: ["programming"],
     id: "hydraTaskManager",
-    name: "HYDRA TASK MANAGER",
-    year: 2019,
+    name: "hydra task manager",
+    year: 201909,
     positions: ["Full-Stack Developer"],
     description:
       "Development of a data analysis module, incorporated in the HydraDev human resources platform, which extracts data from the reports that are submitted daily by the development team.",
@@ -69,8 +69,8 @@ const projectsList = [
   {
     tabs: ["design", "programming"],
     id: "lune",
-    name: "LUNE - FINANCE TRACKER",
-    year: 2021,
+    name: "lune - finance tracker",
+    year: 202111,
     positions: ["UI / UX Designer", "Full-Stack Developer"],
     description: "",
     skills: ["Figma", "JavaScript", "React", "MongoDb", "Express", "NodeJs"],
@@ -79,8 +79,8 @@ const projectsList = [
   {
     tabs: ["design"],
     id: "tusky",
-    name: "TUSKY - COMPANY MANAGER",
-    year: 2022,
+    name: "tusky - company manager",
+    year: 202201,
     positions: ["UI / UX Designer"],
     description: "",
     skills: ["Figma"],
@@ -89,8 +89,8 @@ const projectsList = [
   {
     tabs: ["art"],
     id: "thePromisedReef",
-    name: "THE PROMISED REEF",
-    year: 2016,
+    name: "the promised reef",
+    year: 201507,
     positions: ["Concept Artist", "2D Artist"],
     description:
       "This project consisted in the development of a prototype, incorporating game design practices and art asset production.",
@@ -101,14 +101,36 @@ const projectsList = [
   {
     tabs: ["art"],
     id: "villageAssetPack",
-    name: "VILLAGE ASSET PACK",
-    year: 2016,
+    name: "village asset pack",
+    year: 201610,
     positions: ["2D Artist"],
     description:
       "This project consisted in the production of pixel art game assets.",
     skills: ["Drawing", "Adobe Photoshop"],
     img: "/img/village-asset-pack.png",
     artwork: "https://www.artstation.com/artwork/4R5g2",
+  },
+  {
+    tabs: ["art"],
+    id: "queenMarah",
+    name: "queen marah",
+    year: 201510,
+    positions: ["Concept Artist"],
+    description: "",
+    skills: ["Drawing", "Adobe Photoshop"],
+    img: "/img/queen-marah.png",
+    artwork: "https://www.artstation.com/artwork/0d9b8",
+  },
+  {
+    tabs: ["art"],
+    id: "sassa",
+    name: "sassa",
+    year: 201502,
+    positions: ["Concept Artist"],
+    description: "",
+    skills: ["Drawing", "Adobe Photoshop"],
+    img: "/img/sassa.png",
+    artwork: "https://www.artstation.com/artwork/l6edJ",
   },
 ];
 
@@ -159,7 +181,7 @@ const loadProjects = () => {
 
     div.style.backgroundImage = `url(${project.img})`;
 
-    name.innerHTML = project.name;
+    name.innerHTML = project.name.toUpperCase();
     button.innerHTML = "Learn more";
 
     const positions = document.createElement("div");
