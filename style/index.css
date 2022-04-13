@@ -1,13 +1,17 @@
 :root {
   --c-yellow: #ffcf24;
   --c-grey: #e6e6e6;
+  --c-grey-transparent: #d1d1d1bd;
   --c-black: #1e1e1e;
+  --c-black-transparent: #00000066;
   --c-white: #fcfcfc;
 
   --ci-primary: var(--c-yellow);
   --ci-secondary: var(--c-grey);
   --ci-tertiary: var(--c-black);
   --ci-alt: var(--c-white);
+  --ci-bg-card: var(--c-grey-transparent);
+  --ci-bg-modal: var(--c-black-transparent);
 
   --f-main: "Roboto", sans-serif;
 }
@@ -311,17 +315,13 @@ button {
   position: relative;
   border-radius: 10px;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
-#tech-wrapper {
+#techWrapper {
   margin-bottom: 60px;
   position: relative;
   z-index: -1;
-}
-
-#tech-wrapper .years {
-  font-size: 14px;
 }
 
 #work {
@@ -372,25 +372,23 @@ button {
 #projects .project .info {
   height: 100%;
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 
 #projects .project:hover .info {
-  background-color: #d1d1d1bd;
-  opacity: 1;
+  background-color: var(--ci-bg-card);
+  display: flex;
 }
 
 #projects .project p {
   margin: 8px;
 }
 
-#projects .project .label {
+#projects .project .name {
   font-size: 20px;
   font-weight: bold;
 }
@@ -406,6 +404,89 @@ button {
   color: var(--ci-alt);
   font-size: 14px;
   font-weight: 300;
+}
+
+#modal {
+  background-color: var(--ci-bg-modal);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: auto;
+}
+
+#modal .close {
+  margin: 2px 12px;
+  color: var(--ci-primary);
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#modal .close:hover,
+#modal .close:focus {
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#modal .modal-content {
+  background-color: var(--ci-alt);
+  width: 50%;
+  position: fixed;
+  border-radius: 10px;
+  animation: 0.8s fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#modal .modal-header {
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+}
+
+#modal .modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#modal #modalTitle {
+  margin-bottom: 0;
+}
+
+#modal #skills {
+  margin: 20px 0;
+  padding: 10px 18px;
+}
+
+#modal .skill {
+  background-color: var(--ci-tertiary);
+  margin: 18px 18px 0 0;
+  padding: 10px 16px;
+  display: inline-block;
+  color: var(--ci-alt);
+  border-radius: 6px;
+}
+
+#modal .skill:last-child {
+  margin-right: 0;
 }
 
 #contact {

@@ -1,22 +1,22 @@
 const techSkills = [
-  { name: "HTML", years: 4 },
-  { name: "CSS", years: 4 },
-  { name: "JavaScript", years: 4 },
-  { name: "React", years: 2 },
-  { name: "Svelte", years: 0 },
-  { name: "Vue", years: 1 },
-  { name: "Node", years: 4 },
-  { name: "NPM", years: 4 },
-  { name: "Postman", years: 2 },
-  { name: "MongoDB", years: 4 },
-  { name: "Express", years: 4 },
-  { name: "MySQL", years: 1 },
-  { name: "Figma", years: 2 },
-  { name: "Adobe XD", years: 4 },
-  { name: "Adobe Photoshop", years: 4 },
-  { name: "Adobe Illustrator", years: 4 },
-  { name: "Blender", years: 1 },
-  { name: "Cinema 4D", years: 1 },
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Svelte",
+  "Vue",
+  "Node",
+  "NPM",
+  "Postman",
+  "MongoDB",
+  "Express",
+  "MySQL",
+  "Figma",
+  "Adobe XD",
+  "Adobe Photoshop",
+  "Adobe Illustrator",
+  "Blender",
+  "Cinema 4D",
 ];
 
 const softSkills = [
@@ -31,49 +31,55 @@ const softSkills = [
 const projectsList = [
   {
     tabs: ["design", "programming"],
-    name: "nomad",
-    label: "NOMAD",
+    id: "nomad",
+    name: "NOMAD",
     positions: ["UI / UX Designer", "Front-End Developer"],
+    skills: ["Adobe Illustrator", "HTML", "CSS", "JavaScript"],
     img: "/img/no-image.png",
   },
   {
     tabs: ["design", "programming"],
-    name: "feiraArtesanato",
-    label: "FEIRA DE ARTESANATO VILA DO CONDE",
+    id: "feiraArtesanato",
+    name: "FEIRA DE ARTESANATO VILA DO CONDE",
     positions: ["UI / UX Designer", "Java Developer"],
+    skills: ["Adobe Illustrator", "Adobe XD", "Java", "Android Studio"],
     img: "/img/feira-artesanato.png",
   },
   {
     tabs: ["programming"],
-    name: "hydraTaskManager",
-    label: "HYDRA TASK MANAGER",
+    id: "hydraTaskManager",
+    name: "HYDRA TASK MANAGER",
     positions: ["Full-Stack Developer"],
+    skills: ["JavaScript", "React", "MongoDb", "Express", "NodeJs"],
     img: "/img/no-image.png",
   },
   {
     tabs: ["design", "programming"],
-    name: "lune",
-    label: "LUNE - FINANCE TRACKER",
+    id: "lune",
+    name: "LUNE - FINANCE TRACKER",
     positions: ["UI / UX Designer", "Full-Stack Developer"],
+    skills: ["Figma", "JavaScript", "React", "MongoDb", "Express", "NodeJs"],
     img: "/img/no-image.png",
   },
   {
     tabs: ["design"],
-    name: "tusky",
-    label: "TUSKY - COMPANY MANAGER",
+    id: "tusky",
+    name: "TUSKY - COMPANY MANAGER",
     positions: ["UI / UX Designer"],
+    skills: ["Figma"],
     img: "/img/no-image.png",
   },
   {
     tabs: ["art"],
-    name: "thePromisedReef",
-    label: "THE PROMISED REEF",
+    id: "thePromisedReef",
+    name: "THE PROMISED REEF",
     positions: ["Concept Artist"],
+    skills: ["Drawing", "Adobe Photoshop"],
     img: "/img/the-promised-reef.png",
   },
 ];
 
-window.onload = function () {
+window.onload = () => {
   const menuCircle = document.getElementsByClassName("menu-circle")[0];
   const body = document.getElementsByTagName("body")[0];
 
@@ -84,56 +90,25 @@ window.onload = function () {
   loadSkills();
   loadProjects();
 
-  const moreButtons = document.getElementsByClassName("more");
-
-  console.log("open", moreButtons);
-
-  for (const button of moreButtons) {
-    button.addEventListener("click", () => {
-      console.log(button.id);
-    });
-  }
-
   document.getElementById("defaultOpen").click();
+
+  handleModal();
+};
+
+window.onclick = (event) => {
+  const modal = document.getElementById("modal");
+
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
 };
 
 const loadSkills = () => {
-  let techWrapper = document.getElementById("tech-wrapper");
+  const techWrapper = document.getElementById("techWrapper");
+  const softWrapper = document.getElementById("softWrapper");
 
-  for (let i = 0; i < techSkills.length; i++) {
-    let div = document.createElement("div");
-    let name = document.createElement("p");
-    let years = document.createElement("p");
-
-    div.setAttribute("class", "skill");
-
-    name.innerHTML = techSkills[i].name;
-    name.setAttribute("class", "text");
-
-    years.innerHTML = `${
-      techSkills[i].years === 0
-        ? "less than a year"
-        : techSkills[i].years === 1
-        ? `${techSkills[i].years} year`
-        : `${techSkills[i].years} years`
-    }`;
-    years.setAttribute("class", "years");
-
-    div.appendChild(name);
-    div.appendChild(years);
-    techWrapper.appendChild(div);
-  }
-
-  let softWrapper = document.getElementById("soft-wrapper");
-
-  for (let i = 0; i < softSkills.length; i++) {
-    let p = document.createElement("p");
-
-    p.innerHTML = softSkills[i];
-    p.setAttribute("class", "skill");
-
-    softWrapper.appendChild(p);
-  }
+  createLabel(techSkills, techWrapper, "skill");
+  createLabel(softSkills, softWrapper, "skill");
 };
 
 const loadProjects = () => {
@@ -142,37 +117,29 @@ const loadProjects = () => {
   for (const project of projectsList) {
     const div = document.createElement("div");
     const info = document.createElement("div");
-    const label = document.createElement("p");
+    const name = document.createElement("p");
     const button = document.createElement("button");
 
     div.style.backgroundImage = `url(${project.img})`;
 
-    label.innerHTML = project.label;
+    name.innerHTML = project.name;
     button.innerHTML = "Learn more";
 
     const positions = document.createElement("div");
 
-    for (const pos of project.positions) {
-      const position = document.createElement("p");
-
-      position.innerHTML = pos;
-
-      position.setAttribute("class", "position");
-
-      positions.appendChild(position);
-    }
+    createLabel(project.positions, positions, "position");
 
     div.setAttribute("class", "project");
     info.setAttribute("class", "info");
-    label.setAttribute("class", "label");
-    button.setAttribute("id", `${project.name}More`);
+    name.setAttribute("class", "name");
+    button.setAttribute("id", `${project.id}`);
     button.setAttribute("class", "more");
 
     for (const tab of project.tabs) {
-      div.classList.add("class", tab);
+      div.classList.add(tab);
     }
 
-    info.appendChild(label);
+    info.appendChild(name);
     info.appendChild(positions);
     info.appendChild(button);
     div.appendChild(info);
@@ -180,7 +147,7 @@ const loadProjects = () => {
   }
 };
 
-const handleProjects = (e, tab) => {
+const handleTabs = (e, tab) => {
   const project = document.getElementsByClassName("project");
   const tabLinks = document.getElementsByClassName("tabLinks");
   const selectedTab = document.getElementsByClassName(tab);
@@ -195,13 +162,64 @@ const handleProjects = (e, tab) => {
 
   if (tab !== "all") {
     for (const selected of selectedTab) {
-      selected.style.display = "block";
+      selected.style.display = "flex";
     }
   } else {
     for (let i = 0; i < project.length; i++) {
-      project[i].style.display = "block";
+      project[i].style.display = "flex";
     }
   }
 
   e.currentTarget.className += " active";
+};
+
+const handleModal = () => {
+  const moreButtons = document.getElementsByClassName("more");
+  const modal = document.getElementById("modal");
+  const close = document.getElementsByClassName("close")[0];
+
+  for (const button of moreButtons) {
+    button.addEventListener("click", () => {
+      modal.style.display = "flex";
+
+      showProject(button.id);
+    });
+  }
+
+  close.onclick = function () {
+    modal.style.display = "none";
+  };
+};
+
+const showProject = (id) => {
+  const header = document.getElementsByClassName("modal-header")[0];
+  const modalTitle = document.getElementById("modalTitle");
+  const skills = document.getElementById("skills");
+  const positions = document.getElementById("positions");
+
+  positions.innerHTML = "";
+  skills.innerHTML = "";
+
+  const project = projectsList
+    .filter((project) => project.id === id)
+    .reduce((obj, item) => (obj[item.id] = item));
+
+  header.style.backgroundImage = `url(${project.img})`;
+
+  modalTitle.innerHTML = project.name;
+
+  createLabel(project.positions, positions, "position");
+  createLabel(project.skills, skills, "skill");
+};
+
+const createLabel = (arr, wrapper, className) => {
+  for (const skill of arr) {
+    let p = document.createElement("p");
+
+    p.innerHTML = skill;
+
+    p.setAttribute("class", className);
+
+    wrapper.appendChild(p);
+  }
 };

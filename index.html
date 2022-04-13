@@ -83,10 +83,10 @@
           <h2 class="title">Competencies</h2>
 
           <h3 class="title">Technical Skills</h3>
-          <div id="tech-wrapper"></div>
+          <div id="techWrapper"></div>
 
           <h3 class="title">Soft Skills</h3>
-          <div id="soft-wrapper"></div>
+          <div id="softWrapper"></div>
         </div>
       </div>
     </section>
@@ -97,33 +97,46 @@
           id="defaultOpen"
           class="tabLinks"
           type="button"
-          onclick="handleProjects(event, 'all')"
+          onclick="handleTabs(event, 'all')"
         >
           All
         </button>
         <button
           class="tabLinks"
           type="button"
-          onclick="handleProjects(event,'art')"
+          onclick="handleTabs(event,'art')"
         >
           Art
         </button>
         <button
           class="tabLinks"
           type="button"
-          onclick="handleProjects(event,'design')"
+          onclick="handleTabs(event,'design')"
         >
           Design
         </button>
         <button
           class="tabLinks"
           type="button"
-          onclick="handleProjects(event,'programming')"
+          onclick="handleTabs(event,'programming')"
         >
           Programming
         </button>
       </div>
       <div id="projects"></div>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <h2 id="modalTitle"></h2>
+            <div id="positions"></div>
+            <div id="skills"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
