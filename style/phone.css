@@ -1,4 +1,4 @@
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 510px) {
   header {
     padding: 20px;
   }
@@ -50,6 +50,8 @@
 
   #me,
   #competencies,
+  #cv,
+  #extras,
   #work,
   #contact {
     padding: 56px 32px;

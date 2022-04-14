@@ -7,6 +7,8 @@ window.onload = () => {
   });
 
   loadSkills();
+  loadExperience();
+  loadEducation();
   loadProjects();
 
   document.getElementById("defaultOpen").click();
@@ -30,12 +32,26 @@ const loadSkills = () => {
   createLabel(softSkills, softWrapper, "skill");
 };
 
+const loadExperience = () => {
+  const experience = document.getElementById("experience");
+
+  for (const item of experienceList) {
+    experience.appendChild(createCard(item));
+  }
+};
+
+const loadEducation = () => {
+  const education = document.getElementById("education");
+
+  for (const item of educationList) {
+    education.appendChild(createCard(item));
+  }
+};
+
 const loadProjects = () => {
   const projects = document.getElementById("projects");
 
   projectsList.sort((a, b) => (a.year < b.year ? 1 : -1));
-
-  console.log(projectsList);
 
   for (const project of projectsList) {
     const div = document.createElement("div");
@@ -130,7 +146,7 @@ const showProject = (id) => {
 
   header.style.backgroundImage = `url(${project.img})`;
 
-  modalTitle.innerHTML = project.name;
+  modalTitle.innerHTML = project.name.toUpperCase();
   description.innerHTML = project.description;
 
   createLabel(project.positions, positions, "position");
@@ -206,4 +222,40 @@ const createButton = (name, idName, href, isDisabled = false) => {
   });
 
   return button;
+};
+
+const createCard = (item) => {
+  const div = document.createElement("div");
+  const top = document.createElement("div");
+  const bottom = document.createElement("div");
+  const year = document.createElement("p");
+  const name = document.createElement("p");
+  const bar = document.createElement("div");
+  const title = document.createElement("p");
+  const description = document.createElement("p");
+
+  year.innerHTML = item.year;
+  name.innerHTML = item.name;
+  title.innerHTML = item.title;
+  description.innerHTML = item.description;
+
+  div.setAttribute("class", "card");
+  top.setAttribute("class", "top");
+  bottom.setAttribute("class", "bottom");
+  year.setAttribute("class", "year");
+  name.setAttribute("class", "name");
+  bar.setAttribute("class", "bar");
+  title.setAttribute("class", "title");
+  description.setAttribute("class", "description");
+
+  top.appendChild(year);
+  top.appendChild(name);
+  bottom.appendChild(title);
+  bottom.appendChild(description);
+
+  div.appendChild(top);
+  div.appendChild(bar);
+  div.appendChild(bottom);
+
+  return div;
 };

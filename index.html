@@ -1,168 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style/index.css" />
-    <link rel="stylesheet" href="style/small.css" />
-    <link rel="stylesheet" href="style/tablet.css" />
-    <link rel="stylesheet" href="style/phone.css" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
-    <!-- JS -->
-    <script src="js/variables.js"></script>
-    <script src="js/index.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style/index.css" />
+  <link rel="stylesheet" href="style/small.css" />
+  <link rel="stylesheet" href="style/tablet.css" />
+  <link rel="stylesheet" href="style/phone.css" />
 
-    <title>Mariana Moreira</title>
-  </head>
+  <!-- JS -->
+  <script src="js/variables.js"></script>
+  <script src="js/index.js"></script>
 
-  <body>
-    <header>
-      <div class="menu-circle">
-        <button class="btn-menu btn--htx">
-          <span></span>
-        </button>
-      </div>
-      <div class="menu-wrapper">
-        <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </header>
+  <title>Mariana Moreira</title>
+</head>
 
-    <section id="home">
-      <h1>artist / coder</h1>
-    </section>
+<body>
+  <header>
+    <div class="menu-circle">
+      <button class="btn-menu btn--htx">
+        <span></span>
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <section id="about">
-      <div id="me">
-        <div>
-          <div class="personal-img">
-            <img src="img/self-portrait.png" class="img"></img>
-          </div>
-          <div class="info">
-            <h2 class="title">Hi! My name is Mariana.</h2>
-            <p>I am a full-stack web developer based in Portugal.</p>
-            <p>
-              I have been working as a web developer since 2019. I've always
-              though of myself as someone who is creative as well as logical. In
-              college, I started with game design and there I discovered that
-              coding was also a great fit for me. I then moved onto web
-              development and I've worked as a web developer ever since.
-            </p>
-            <p>
-              Having both a logical side and a creative side I'm able to bring
-              creations to life from start to finish without losing any detail.
-            </p>
-            <div class="links">
-              <a href="https://github.com/solecity" target="_blank">
-                <img src="svg/github.svg" alt="github" class="icon" />
-              </a>
-              <a href="https://www.linkedin.com/in/mariana-m-64966a63/" target="_blank">
-                <img src="svg/linkedin.svg" alt="linkedin" class="icon" />
-              </a>
-              <a href="https://www.behance.net/marianamoreira6" target="_blank">
-                <img src="svg/behance.svg" alt="behance" class="icon" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="triangle"></div>
+  <section id="home">
+    <h1>artist / coder</h1>
+  </section>
 
-      <div id="competencies">
-        <div>
-          <h2 class="title">Competencies</h2>
-
-          <h3 class="title">Technical Skills</h3>
-          <div id="techWrapper"></div>
-
-          <h3 class="title">Soft Skills</h3>
-          <div id="softWrapper"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="dividerTop">
-      <div class="divider"></div>
-    </section>
-
-    <section id="work">
-      <div id="tabs">
-        <button
-          id="defaultOpen"
-          class="tabLinks"
-          type="button"
-          onclick="handleTabs(event, 'all')"
-        >
-          All
-        </button>
-        <button
-          class="tabLinks"
-          type="button"
-          onclick="handleTabs(event,'art')"
-        >
-          Art
-        </button>
-        <button
-          class="tabLinks"
-          type="button"
-          onclick="handleTabs(event,'design')"
-        >
-          Design
-        </button>
-        <button
-          class="tabLinks"
-          type="button"
-          onclick="handleTabs(event,'programming')"
-        >
-          Programming
-        </button>
-      </div>
-      <div id="projects"></div>
-
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button class="btn-close">
-              <span></span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <h2 id="modalTitle"></h2>
-            <div id="positions"></div>
-            <p id="description"></p>
-            <div id="skills"></div>
-          </div>
-          <div class="modal-footer"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="dividerBottom">
-      <div class="divider"></div>
-    </section>
-
-    <section id="contact">
+  <section id="about">
+    <div id="me">
       <div>
-        <div id="info">
-          <h1>Contact me</h1>
-          <p><span>Email:</span> marianaccmoreira@gmail.com</p>
-          <p><span>Location:</span> Porto, Portugal</p>
+        <div class="personal-img">
+          <img src="img/self-portrait.png" class="img"></img>
         </div>
-        <div id="links">
+        <div class="info">
+          <h2 class="title">Hi! My name is Mariana.</h2>
+          <p>I am a full-stack web developer based in Portugal.</p>
+          <p>
+            I have been working as a web developer since 2019. I've always
+            though of myself as someone who is creative as well as logical. In
+            college, I started with game design and there I discovered that
+            coding was also a great fit for me. I then moved onto web
+            development and I've worked as a web developer ever since.
+          </p>
+          <p>
+            Having both a logical side and a creative side I'm able to bring
+            creations to life from start to finish without losing any detail.
+          </p>
           <div class="links">
             <a href="https://github.com/solecity" target="_blank">
               <img src="svg/github.svg" alt="github" class="icon" />
@@ -176,10 +77,140 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <footer id="footer">
-      <p>Copyright © 2022 Mariana Moreira</p>
-    </footer>
-  </body>
+    <div id="triangleMe"></div>
+
+    <div id="competencies">
+      <div>
+        <h2 class="title">Competencies</h2>
+
+        <h3 class="title">Technical Skills</h3>
+        <div id="techWrapper"></div>
+
+        <h3 class="title">Soft Skills</h3>
+        <div id="softWrapper"></div>
+      </div>
+    </div>
+
+    <div id="triangleCompetencies"></div>
+
+    <div id="cv">
+      <div>
+        <h2 class="title">Experience</h2>
+        <div id="experience"></div>
+      </div>
+
+      <div>
+        <h2 class="title">Education</h2>
+        <div id="education"></div>
+      </div>
+    </div>
+
+    <div id="triangleCV"></div>
+
+    <div id="extras">
+      <div>
+        <h2 class="title">Languages</h2>
+        <div id="languages">
+          <div>
+            <p class="language">Portuguese</p>
+            <p class="level">Native</p>
+          </div>
+          <div>
+            <p class="language">English</p>
+            <p class="level">C1</p>
+          </div>
+          <div>
+            <p class="language">Spanish</p>
+            <p class="level">B1</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="title">Interests</h2>
+        <div id="interests">
+          <img src="svg/cat.svg" alt="cat" class="icon" />
+          <img src="svg/plants.svg" alt="plants" class="icon" />
+          <img src="svg/gaming.svg" alt="gaming" class="icon" />
+          <img src="svg/painting.svg" alt="painting" class="icon" />
+          <img src="svg/plain.svg" alt="plain" class="icon" />
+          <img src="svg/cinema.svg" alt="cinema" class="icon" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dividerTop">
+    <div class="divider"></div>
+  </section>
+
+  <section id="work">
+    <div id="tabs">
+      <button id="defaultOpen" class="tabLinks" type="button" onclick="handleTabs(event, 'all')">
+        All
+      </button>
+      <button class="tabLinks" type="button" onclick="handleTabs(event,'art')">
+        Art
+      </button>
+      <button class="tabLinks" type="button" onclick="handleTabs(event,'design')">
+        Design
+      </button>
+      <button class="tabLinks" type="button" onclick="handleTabs(event,'programming')">
+        Programming
+      </button>
+    </div>
+    <div id="projects"></div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="btn-close">
+            <span></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2 id="modalTitle"></h2>
+          <div id="positions"></div>
+          <p id="description"></p>
+          <div id="skills"></div>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dividerBottom">
+    <div class="divider"></div>
+  </section>
+
+  <section id="contact">
+    <div>
+      <div id="info">
+        <h1>Contact me</h1>
+        <p><span>Email:</span> marianaccmoreira@gmail.com</p>
+        <p><span>Location:</span> Porto, Portugal</p>
+      </div>
+      <div id="links">
+        <div class="links">
+          <a href="https://github.com/solecity" target="_blank">
+            <img src="svg/github.svg" alt="github" class="icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/mariana-m-64966a63/" target="_blank">
+            <img src="svg/linkedin.svg" alt="linkedin" class="icon" />
+          </a>
+          <a href="https://www.behance.net/marianamoreira6" target="_blank">
+            <img src="svg/behance.svg" alt="behance" class="icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <p>Copyright © 2022 Mariana Moreira</p>
+  </footer>
+</body>
+
 </html>

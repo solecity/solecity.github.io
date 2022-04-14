@@ -156,3 +156,52 @@ const projectsList = [
     artwork: "https://www.artstation.com/artwork/dP6EA",
   },
 ];
+
+const experienceList = [
+  {
+    year: "2019 - Present",
+    name: "HydraDev",
+    title: "Full-stack Web Developer",
+    description: "Development of internal HR platform: React, Node, MongoDB",
+  },
+  {
+    year: "2021 - 2022",
+    name: "Array",
+    title: "Front-end Developer",
+    description: "Migration of old components using Svelte ",
+  },
+  {
+    year: "2019",
+    name: "UBIQUITY",
+    title: "Web Designer & Front-end Developer - Internship",
+    description: "Development of multimedia projects and website design",
+  },
+  {
+    year: "2012",
+    name: "NO3XIT ENTERTAINMENT",
+    title: "Game Designer - Internship",
+    description:
+      "Design of a mobile game: Game design, Concept art, Storyboard",
+  },
+];
+
+const educationList = [
+  {
+    year: "2017 - 2020",
+    name: "Polytechnic Institute of Porto",
+    title: "Web Information Systems and Technologies",
+    description: "Bachelor’s Degree",
+  },
+  {
+    year: "2013 - 2016",
+    name: "Polytechnic Institute of Bragança",
+    title: "Game Design",
+    description: "Bachelor’s Degree",
+  },
+  {
+    year: "2011 - 2012",
+    name: "University Institute of Maia",
+    title: "Multimedia",
+    description: "Technological Specialization Course",
+  },
+];

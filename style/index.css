@@ -241,15 +241,30 @@ button:not(:disabled):hover {
 }
 
 #home,
-#about .triangle,
+#triangleMe,
 #me,
+#cv .bar,
+#tabs .active,
+#dividerBottom,
 #contact {
   background-color: var(--ci-primary);
+}
+
+#competencies .skill,
+#cv,
+#languages > div,
+#triangleCompetencies,
+#triangleCV,
+.divider,
+#work,
+#skills .skill {
+  background-color: var(--ci-secondary);
 }
 
 #home,
 #me > div,
 #competencies,
+#cv,
 #projects .project,
 #projects .project .info {
   display: flex;
@@ -265,16 +280,39 @@ button:not(:disabled):hover {
 
 #me,
 #competencies,
+#cv,
+#extras,
 #work,
 #contact {
   padding: 88px 200px;
 }
 
-#about .triangle {
+#triangleMe,
+#triangleCompetencies,
+#triangleCV,
+#dividerTop,
+#dividerBottom,
+.divider {
   height: 72px;
   position: relative;
   z-index: -1;
-  clip-path: polygon(100% -10%, 100% 0, 50% 100%, 0 0, 0 -10%);
+}
+
+#triangleMe,
+#triangleCV {
+  clip-path: polygon(50% 100%, 100% 0, 100% -10px, -10px 0, 0% 0);
+}
+
+#triangleCompetencies {
+  clip-path: polygon(50% 100%, 50% 100%, 100% 50%, 100% 110%, 0 110%, 0% 50%);
+}
+
+#dividerTop > div {
+  clip-path: polygon(100% 0, 100% 110%, 0 100%);
+}
+
+#dividerBottom > div {
+  clip-path: polygon(110% 0, 0 0, 0 100%);
 }
 
 #me > div,
@@ -308,7 +346,9 @@ button:not(:disabled):hover {
   margin: 0;
 }
 
-#competencies h2 {
+#competencies h2,
+#cv h2,
+#extras h2 {
   font-size: 32px;
 }
 
@@ -317,7 +357,6 @@ button:not(:disabled):hover {
 }
 
 #competencies .skill {
-  background-color: var(--ci-secondary);
   margin: 0 24px 24px 0;
   padding: 10px 16px;
   display: inline-block;
@@ -334,29 +373,80 @@ button:not(:disabled):hover {
   margin-bottom: 64px;
 }
 
-#dividerTop,
-#dividerBottom,
-.divider {
-  height: 72px;
-  position: relative;
-  z-index: -1;
+#cv,
+#extras {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: flex-start;
 }
 
-.divider,
-#work {
-  background-color: var(--ci-secondary);
+#cv p,
+#extras p {
+  margin: 0 0 4px 0;
 }
 
-#dividerTop > div {
-  clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+#cv .card {
+  margin-bottom: 24px;
+  padding: 4px 8px 4px 0;
 }
 
-#dividerBottom {
-  background-color: var(--ci-primary);
+#cv .top,
+#cv .bottom {
+  margin-left: 20px;
 }
 
-#dividerBottom > div {
-  clip-path: polygon(0 100%, 0% 0, 100% 0, 0 100%);
+#cv .bar {
+  height: 4px;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+#cv .card .name {
+  font-weight: 500;
+}
+
+#cv .card .year {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+#cv .card .title {
+  font-size: 16px;
+}
+
+#cv .card .description,
+#languages .level {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#languages {
+  margin-right: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+#languages > div {
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
+#languages > div:last-child {
+  margin-right: 0;
+}
+
+#languages .language {
+  font-size: 18px;
+}
+
+#interests > img {
+  margin-right: 18px;
+}
+
+#interests > img:last-child {
+  margin-right: 0;
 }
 
 #tabs {
@@ -369,7 +459,6 @@ button:not(:disabled):hover {
 }
 
 #tabs .active {
-  background-color: var(--ci-primary);
   color: var(--ci-tertiary);
   opacity: 1;
 }
@@ -528,7 +617,6 @@ button:not(:disabled):hover {
 }
 
 #skills .skill {
-  background-color: var(--ci-secondary);
   margin: 18px 18px 0 0;
   padding: 10px 16px;
   display: inline-block;

@@ -65,12 +65,19 @@
 
   #me,
   #competencies,
+  #cv,
+  #extras,
   #work,
   #contact {
     padding: 72px 120px;
   }
 
-  #about .triangle {
+  #triangleMe,
+  #triangleCompetencies,
+  #triangleCV,
+  #dividerTop,
+  #dividerBottom,
+  .divider {
     height: 48px;
   }
 
@@ -78,7 +85,9 @@
     margin-right: 56px;
   }
 
-  #competencies h2 {
+  #competencies h2,
+  #cv h2,
+  #extras h2 {
     font-size: 28px;
   }
 
@@ -88,6 +97,32 @@
 
   #competencies .skill {
     margin: 0 20px 20px 0;
+  }
+
+  #cv,
+  #extras {
+    gap: 40px;
+  }
+
+  #cv .card {
+    margin-bottom: 16px;
+  }
+
+  #cv .card .name {
+    font-size: 20px;
+  }
+
+  #languages {
+    margin-right: 32px;
+    gap: 24px;
+  }
+
+  #languages > div {
+    padding: 6px 14px;
+  }
+
+  #interests > img {
+    margin-right: 14px;
   }
 
   #projects {
