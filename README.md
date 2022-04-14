@@ -1,1 +1,1 @@
-# Personal Portfolio (work in progress)
+# Personal Portfolio (always a work in progress)
