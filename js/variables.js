@@ -39,7 +39,6 @@ const projectsList = [
     skills: ["Adobe Illustrator", "HTML", "CSS", "JavaScript"],
     img: "/img/nomad.png",
     source: "https://github.com/solecity/NOMAD",
-    //demo: "https://solecity.github.io/NOMAD/",
   },
   {
     tabs: ["design", "programming"],
@@ -69,7 +68,7 @@ const projectsList = [
     id: "bunnyShooter",
     name: "bunny shooter",
     year: 202001,
-    positions: ["Concept Artist", "JavaScript Developer"],
+    positions: ["2D Artist", "JavaScript Developer"],
     description: "",
     skills: ["Adobe Illustrator", "JavaScript"],
     img: "/img/bunny.png",
