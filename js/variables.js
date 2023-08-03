@@ -2,15 +2,13 @@ const techSkills = [
   "HTML",
   "CSS",
   "JavaScript",
+  "TypeScript",
+  "NextJS",
   "React",
-  "Svelte",
   "Vue",
   "Node",
-  "NPM",
-  "Postman",
   "MongoDB",
   "Express",
-  "MySQL",
   "Figma",
   "Adobe XD",
   "Adobe Photoshop",
@@ -158,7 +156,19 @@ const projectsList = [
 
 const experienceList = [
   {
-    year: "2019 - Present",
+    year: "2023 - Present",
+    name: "TopGaming",
+    title: "Front-end Web Developer",
+    description: "Development of a back-office application from scratch to support the game development and production: NextJs, React, TypeScript",
+  },
+  {
+    year: "2022 - Present",
+    name: "TopGaming",
+    title: "Front-end Game Developer",
+    description: "Development of slot games: Godot, GDScript",
+  },
+  {
+    year: "2019 - 2022",
     name: "HydraDev",
     title: "Full-stack Web Developer",
     description: "Development of internal HR platform: React, Node, MongoDB",
